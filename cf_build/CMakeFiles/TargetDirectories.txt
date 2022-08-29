@@ -1,0 +1,3 @@
+/home/murilo/Documentos/UnB/tr1/TR1_camadafisica/cf_build/CMakeFiles/TR1.dir
+/home/murilo/Documentos/UnB/tr1/TR1_camadafisica/cf_build/CMakeFiles/edit_cache.dir
+/home/murilo/Documentos/UnB/tr1/TR1_camadafisica/cf_build/CMakeFiles/rebuild_cache.dir
