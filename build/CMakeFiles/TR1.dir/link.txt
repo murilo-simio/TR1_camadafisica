@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/TR1.dir/main.cpp.o -o TR1   -L/home/murilo/Documents/unb/tr1/TR1_camadafisica/src 
