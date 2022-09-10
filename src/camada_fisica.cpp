@@ -63,8 +63,8 @@ void CamadaFisicaReceptora(const vector<int> &fluxoBrutoDeBits, int codFis)
         frame = CamadaFisicaReceptoraCodificacaoBipolar(fluxoBrutoDeBits);
         break;
     }
-        CamadaDeAplicacaoReceptora(frame);
     }
+    CamadaDeAplicacaoReceptora(frame);
 }
 
 vector<int> CamadaFisicaTransmissoraCodificacaoBinaria(vector<int> frame)
@@ -86,18 +86,17 @@ vector<int> CamadaFisicaTransmissoraCodificacaoManchester(vector<int> frame)
 {
 
     vector<int> quadro;
-    const vector<int> clock{0, 1};
 
     for (unsigned i = 0; i < frame.size(); i++)
     {
-        quadro.push_back(frame.at(i) ^ clock.at(0));
-        quadro.push_back(frame.at(i) ^ clock.at(1));
+        quadro.push_back(frame.at(i) ^ 0);
+        quadro.push_back(frame.at(i) ^ 1);
         if (i % 8 == 0)
         {
             cout << endl;
         }
-        cout << (frame.at(i) ^ clock.at(0));
-        cout << (frame.at(i) ^ clock.at(1));
+        cout << (frame.at(i) ^ 0);
+        cout << (frame.at(i) ^ 1);
     }
 
     cout << endl;
