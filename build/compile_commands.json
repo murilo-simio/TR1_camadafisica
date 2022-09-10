@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/murilo/Documents/unb/tr1/TR1_camadafisica/build",
-  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/TR1.dir/src/camada_fisica.cpp.o -c /home/murilo/Documents/unb/tr1/TR1_camadafisica/src/camada_fisica.cpp",
-  "file": "/home/murilo/Documents/unb/tr1/TR1_camadafisica/src/camada_fisica.cpp"
+  "command": "/usr/bin/g++  -I/home/murilo/Documents/unb/tr1/TR1_camadafisica/inc -g -std=gnu++14 -o CMakeFiles/TR1.dir/main.cpp.o -c /home/murilo/Documents/unb/tr1/TR1_camadafisica/main.cpp",
+  "file": "/home/murilo/Documents/unb/tr1/TR1_camadafisica/main.cpp"
 }
 ]

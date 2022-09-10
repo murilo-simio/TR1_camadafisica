@@ -149,29 +149,29 @@ TR1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/build
 .PHONY : TR1/fast
 
-src/camada_fisica.o: src/camada_fisica.cpp.o
-.PHONY : src/camada_fisica.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-src/camada_fisica.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/src/camada_fisica.cpp.o
-.PHONY : src/camada_fisica.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/camada_fisica.i: src/camada_fisica.cpp.i
-.PHONY : src/camada_fisica.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/camada_fisica.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/src/camada_fisica.cpp.i
-.PHONY : src/camada_fisica.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/camada_fisica.s: src/camada_fisica.cpp.s
-.PHONY : src/camada_fisica.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/camada_fisica.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/src/camada_fisica.cpp.s
-.PHONY : src/camada_fisica.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TR1.dir/build.make CMakeFiles/TR1.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -184,9 +184,9 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... TR1"
-	@echo "... src/camada_fisica.o"
-	@echo "... src/camada_fisica.i"
-	@echo "... src/camada_fisica.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

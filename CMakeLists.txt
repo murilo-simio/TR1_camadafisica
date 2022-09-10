@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE main.cpp)
 
-add_executable(TR1 src/camada_fisica.cpp)
+link_directories(src)
+include_directories(inc)
+add_executable(TR1 main.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/murilo/Documents/unb/tr1/TR1_camadafisica/src/camada_fisica.cpp" "CMakeFiles/TR1.dir/src/camada_fisica.cpp.o" "gcc" "CMakeFiles/TR1.dir/src/camada_fisica.cpp.o.d"
+  "/home/murilo/Documents/unb/tr1/TR1_camadafisica/main.cpp" "CMakeFiles/TR1.dir/main.cpp.o" "gcc" "CMakeFiles/TR1.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

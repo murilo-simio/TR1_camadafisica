@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TR1.dir/src/camada_fisica.cpp.o"
-  "CMakeFiles/TR1.dir/src/camada_fisica.cpp.o.d"
+  "CMakeFiles/TR1.dir/main.cpp.o"
+  "CMakeFiles/TR1.dir/main.cpp.o.d"
   "TR1"
   "TR1.pdb"
 )
