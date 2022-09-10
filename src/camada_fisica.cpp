@@ -1,4 +1,5 @@
 #include "camada_fisica.h"
+#include "camada_app.h"
 
 void CamadaFisicaTransmissora(const vector<int> &frame, int codFis)
 {
@@ -7,17 +8,17 @@ void CamadaFisicaTransmissora(const vector<int> &frame, int codFis)
 
     switch (codFis)
     {
-    case 0:
+    case 1:
     {
         fluxoBrutoDeBits = CamadaFisicaTransmissoraCodificacaoBinaria(frame);
         break;
     }
-    case 1:
+    case 2:
     {
         fluxoBrutoDeBits = CamadaFisicaTransmissoraCodificacaoManchester(frame);
         break;
     }
-    case 2:
+    case 3:
     {
         fluxoBrutoDeBits = CamadaFisicaTransmissoraCodificacaoBipolar(frame);
         break;
@@ -47,17 +48,17 @@ void CamadaFisicaReceptora(const vector<int> &fluxoBrutoDeBits, int codFis)
 
     switch (codFis)
     {
-    case 0:
+    case 1:
     {
         frame = CamadaFisicaReceptoraCodificacaoBinaria(fluxoBrutoDeBits);
         break;
     }
-    case 1:
+    case 2:
     {
         frame = CamadaFisicaReceptoraCodificacaoManchester(fluxoBrutoDeBits);
         break;
     }
-    case 2:
+    case 3:
     {
         frame = CamadaFisicaReceptoraCodificacaoBipolar(fluxoBrutoDeBits);
         break;

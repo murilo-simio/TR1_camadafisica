@@ -3,7 +3,7 @@ project(TR1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCES src/camada_fisica.cpp src/camada_app.cpp src/main.cpp)
+set(SOURCES src/utils.cpp src/camada_fisica.cpp src/camada_app.cpp src/main.cpp)
 
 add_executable(TR1 ${SOURCES})
 
