@@ -7,20 +7,13 @@
 #include <vector>
 
 #include "camada_fisica.h"
+#include "camada_app.h"
 
 using namespace std;
 
-void main()
+int main()
 {
     AplicacaoTransmissora();
-}
 
-void AplicacaoTransmissora()
-{
-    string mensagem;
-    cout << "Digite uma mensagem: " << endl;
-    cin >> mensagem;
-
-    // Chama a próxima camada
-    CamadaDeAplicacaoTransmissora(mensagem);
+    return 0;
 }
