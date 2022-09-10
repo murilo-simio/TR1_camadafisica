@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/TR1.dir/src/camada_fisica.cpp.o -o TR1 

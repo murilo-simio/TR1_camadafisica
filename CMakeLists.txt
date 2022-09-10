@@ -3,4 +3,10 @@ project(TR1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TR1 main.cpp camada_fisica.h)
+set(SOURCE main.cpp)
+
+add_executable(TR1 src/camada_fisica.cpp)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
