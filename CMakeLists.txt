@@ -3,4 +3,12 @@ project(TR1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TR1 main.cpp camada_fisica.h)
+set(SOURCES src/utils.cpp src/camada_fisica.cpp src/camada_app.cpp src/main.cpp)
+
+add_executable(TR1 ${SOURCES})
+
+target_include_directories(TR1 PRIVATE ${PROJECT_SOURCE_DIR}/inc)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
