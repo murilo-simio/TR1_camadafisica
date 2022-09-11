@@ -1,7 +1,8 @@
 #include "camada_fisica.h"
 #include "camada_app.h"
+#include "camada_enlace.h"
 
-void CamadaFisicaTransmissora(const vector<int> &frame, int codFis)
+void CamadaFisicaTransmissora(const vector<int> &frame, int codFis, int error)
 {
 
     vector<int> fluxoBrutoDeBits;
@@ -24,18 +25,27 @@ void CamadaFisicaTransmissora(const vector<int> &frame, int codFis)
         break;
     }
     }
-    MeioDeComunicacao(fluxoBrutoDeBits, codFis);
+    MeioDeComunicacao(fluxoBrutoDeBits, codFis, error);
 }
 
-void MeioDeComunicacao(const vector<int> &fluxoBrutoDeBits, int codFis)
+void MeioDeComunicacao(const vector<int> &fluxoBrutoDeBits, int codFis, int error)
 {
 
+    bool e;
     vector<int> fluxoBrutoDeBitsPontoA, fluxoBrutoDeBitsPontoB;
     fluxoBrutoDeBitsPontoA = fluxoBrutoDeBits;
 
     for (unsigned i = 0; i < fluxoBrutoDeBitsPontoA.size(); i++)
     {
-        fluxoBrutoDeBitsPontoB.push_back(fluxoBrutoDeBitsPontoA.at(i));
+        e = error < randomNumberGenerator();
+        if (e)
+        {
+            fluxoBrutoDeBitsPontoB.push_back(fluxoBrutoDeBitsPontoA.at(i));
+        }
+        else
+        {
+            fluxoBrutoDeBitsPontoB.push_back(!fluxoBrutoDeBitsPontoA.at(i));
+        }
     }
 
     CamadaFisicaReceptora(fluxoBrutoDeBitsPontoB, codFis);
@@ -64,7 +74,7 @@ void CamadaFisicaReceptora(const vector<int> &fluxoBrutoDeBits, int codFis)
         break;
     }
     }
-    CamadaDeAplicacaoReceptora(frame);
+    CamadaEnlaceReceptora(frame);
 }
 
 vector<int> CamadaFisicaTransmissoraCodificacaoBinaria(vector<int> frame)

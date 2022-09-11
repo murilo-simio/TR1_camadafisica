@@ -9,4 +9,4 @@ using namespace std;
 void AplicacaoReceptora(const string& mensagem);
 void AplicacaoTransmissora();
 void CamadaDeAplicacaoReceptora(const vector<int> &frame);
-void CamadaDeAplicacaoTransmissora(const string& mensagem, int codFis);
+void CamadaDeAplicacaoTransmissora(const string& mensagem, int codFis, int error);

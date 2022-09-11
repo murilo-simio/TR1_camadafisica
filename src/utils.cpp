@@ -1,7 +1,42 @@
 #include "utils.h"
 
-// String to ASCII function
-vector<int> stoa(string mensagem)
+// String to vector function
+vector<int> stov(string mensagem)
+{
+
+    vector<int> frame;
+
+    for (unsigned i = 0; i < mensagem.size(); i++)
+    {
+        frame.push_back(int(mensagem.at(i)));
+    }
+    return frame;
+}
+
+// Vector to string function
+string vtos(vector<int> frame)
+{
+
+    string mensagem = "";
+
+    for (unsigned i = 0; i < frame.size(); i++)
+    {
+
+        mensagem.append(1, char(frame[i]));
+    }
+
+    return mensagem;
+}
+
+// Returns a random number between 0-100
+int randomNumberGenerator()
+{
+    srand(time(NULL));
+    return (rand() % 100);
+}
+
+// ASCII to bits function
+vector<int> atob(vector<int> mensagem)
 {
 
     vector<int> frame;
@@ -33,27 +68,23 @@ vector<int> stoa(string mensagem)
     return frame;
 }
 
-// ASCII to string function
-string atos(vector<int> frame)
+// Bits to ASCII
+vector<int> btoa(vector<int> frame)
 {
 
-    string mensagem = "";
+    vector<int> quadro;
     int intChar = 0;
 
     for (unsigned i = 0; i < frame.size(); i++)
     {
-
         if (i != 0 && i % 8 == 0)
         {
-            mensagem.append(1, char(intChar));
+            quadro.push_back(intChar);
             intChar = 0;
         }
-
         intChar = intChar << 1;
         intChar += frame.at(i);
     }
-
-    mensagem.append(1, char(intChar));
-
-    return mensagem;
+    quadro.push_back(intChar);
+    return quadro;
 }
