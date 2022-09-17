@@ -9,3 +9,4 @@ string vtos(vector<int> frame);
 int randomNumberGenerator();
 vector<int> btoa(vector<int> frame);
 vector<int> atob(vector<int> mensagem);
+string atos(vector<int> frame);

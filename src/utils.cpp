@@ -88,3 +88,27 @@ vector<int> btoa(vector<int> frame)
     quadro.push_back(intChar);
     return quadro;
 }
+
+string atos(vector<int> frame)
+{
+
+    string mensagem = "";
+    int intChar = 0;
+
+    for (unsigned i = 0; i < frame.size(); i++)
+    {
+
+        if (i != 0 && i % 8 == 0)
+        {
+            mensagem.append(1, char(intChar));
+            intChar = 0;
+        }
+
+        intChar = intChar << 1;
+        intChar += frame.at(i);
+    }
+
+    mensagem.append(1, char(intChar));
+
+    return mensagem;
+}

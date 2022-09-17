@@ -30,7 +30,7 @@ void CamadaDeAplicacaoTransmissora(const string& mensagem, int codFis, int error
 
 void CamadaDeAplicacaoReceptora(const vector<int> &frame)
 {
-    string mensagem = vtos(frame);
+    string mensagem = atos(frame);
     AplicacaoReceptora(mensagem);
 }
 

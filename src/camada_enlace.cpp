@@ -3,8 +3,9 @@
 
 void CamadaEnlaceTransmissora(vector<int> &frame, int codFis, int error)
 {
-    vector<int> quadro = CamadaEnlaceTransmissoraEnquadramento(frame);
-    quadro = atob(quadro);
+    vector<int> quadro ;
+    // quadro = CamadaEnlaceTransmissoraEnquadramento(frame);
+    quadro = atob(frame);
     CamadaFisicaTransmissora(quadro, codFis, error);
 }
 
